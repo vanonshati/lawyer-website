@@ -1,0 +1,217 @@
+/******* Bootstrap Theming ********/
+
+$primary: #B49C73;
+$secondary: #37373F;
+
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
+$headings-font-family: 'Roboto', sans-serif;
+
+$body-color: #757575;
+
+$headings-color: $secondary;
+
+$enable-responsive-font-sizes: true;
+
+$border-radius: 5px;
+
+@import "bootstrap/scss/bootstrap";
+
+
+/********** Custom CSS ************/
+h1, h2, h3 {
+    font-weight: 700 !important;
+}
+
+h4, h5, h6 {
+    font-weight: 500 !important;
+}
+
+.btn {
+    font-weight: 600;
+    padding: 10px 25px;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 90px;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 15px;
+    bottom: 15px;
+    z-index: 11;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 30px 15px;
+    color: $secondary;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: $primary;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        padding: 5px 0;
+    }
+}
+
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(55, 55, 63, .7);
+    z-index: 1;
+}
+
+@media (min-width: 992px) {
+    .feature-text {
+        margin-left: -100px;
+    }
+}
+
+.bg-page-header {
+    background: linear-gradient(rgba(55, 55, 63, 0.7), rgba(55, 55, 63, 0.7)), url(../img/carousel-2.jpg), no-repeat center center;
+    background-size: cover;
+}
+
+.bg-appointment {
+    background: linear-gradient(rgba(55, 55, 63, 0.7), rgba(55, 55, 63, 0.7)), url(../img/carousel-1.jpg), no-repeat center center;
+    background-size: cover;
+}
+
+.bg-action {
+    background: linear-gradient(rgba(55, 55, 63, 0.7), rgba(55, 55, 63, 0.7)), url(../img/carousel-2.jpg), no-repeat center center;
+    background-size: cover;
+}
+
+.owl-carousel .owl-nav {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    top: -70px;
+    left: calc(50% - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+    background: $secondary;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.team-img .team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(55, 55, 63, .7);
+    transition: .5s;
+    z-index: 1;
+    opacity: 0;
+}
+
+.team-item:hover .team-social {
+    opacity: 1;
+}
+
+.testimonial-text::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: -24px;
+    left: 28px;
+    border: 12px solid;
+    border-color: $secondary transparent transparent transparent;
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-dots {
+    position: absolute;
+    width: 100%;
+    top: -50px;
+    text-align: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: $primary;
+}
+
+.testimonial-carousel .owl-dot::after {
+    position: absolute;
+    content: "";
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border: 2px solid $primary;
+    border-radius: 20px;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: $dark;
+}
+
+.contact-form .help-block ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
